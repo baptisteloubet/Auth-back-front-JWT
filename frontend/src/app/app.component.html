@@ -2,8 +2,10 @@
 <mat-toolbar color="primary" class="app-header">
   <div>Blog</div>
   <span class="nav-tool-items">
-    <a mat-button routerLink="login" routerLinkActive="active">Connexion</a>
-    <a mat-button mat-raised-button routerLink="register" routerLinkActive="active">Inscription</a>
+    <a mat-button routerLink="login" routerLinkActive="active"*ngIf="!token.isLoggedIn()">Connexion</a>
+    <a mat-button routerLink="register" routerLinkActive="active"*ngIf="!token.isLoggedIn()">Inscription</a>
+    <a mat-button routerLink="user-profile" routerLinkActive="active" *ngIf="token.isLoggedIn()">Profil</a>
+    <a mat-button routerLink="register" (click)="token.removeToken()" *ngIf="token.isLoggedIn()">Déconnexion</a>
   </span>
 </mat-toolbar>
 

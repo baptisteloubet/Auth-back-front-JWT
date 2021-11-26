@@ -40,7 +40,7 @@ export class LogInComponent implements OnInit {
         },() => {
           this.authState.setAuthState(true);
           this.loginForm.reset()
-          this.router.navigate(['profile']);
+          this.router.navigate(['user-profile']);
         }
       );
   }

@@ -1,7 +1,7 @@
 
 export interface User {
   name: string;
-  email: String;
-  password: String;
-  password_confirmation: String
+  email: string;
+  password?: string;
+  password_confirmation?: string
 }
