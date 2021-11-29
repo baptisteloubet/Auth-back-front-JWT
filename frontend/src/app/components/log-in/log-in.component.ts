@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthStateService } from 'src/app/shared/auth-state.service';
-import { AuthService } from 'src/app/shared/auth.service';
-import { TokenService } from 'src/app/shared/token.service';
+import { AuthStateService } from 'src/app/services/auth-state.service';
+import { AuthService } from 'src/app/services/auth.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-log-in',
@@ -14,6 +14,7 @@ export class LogInComponent implements OnInit {
 
   loginForm: FormGroup;
   errors = null;
+  hide = true;
 
   constructor(
     public router: Router,

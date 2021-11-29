@@ -8,19 +8,25 @@
 
       <mat-card-content>
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Nom Prénom" formControlName="name">
+          <input matInput placeholder="Nom Prénom" formControlName="name" required>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="E-Mail" formControlName="email">
+          <input matInput placeholder="E-Mail" formControlName="email" required>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Mot de passe" formControlName="password" type="password">
+          <input matInput placeholder="Mot de passe" formControlName="password" type="password" [type]="hide ? 'password' : 'text'" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" type="button">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Confirmation du Mot de passe" formControlName="password_confirmation" type="password">
+          <input matInput placeholder="Confirmation du Mot de passe" formControlName="password_confirmation" type="password" [type]="hide ? 'password' : 'text'" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" type="button">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
         </mat-form-field>
 
       </mat-card-content>

@@ -10,7 +10,7 @@ import { AngularMaterialModule } from './angular-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthInterceptor } from './shared/auth.interceptor';
+import { AuthInterceptor } from './services/auth.interceptor';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { ChangePasswordRequestComponent } from './components/change-password-request/change-password-request.component';
 import { ChangePasswordComponent } from './components/change-password/change-password.component';
