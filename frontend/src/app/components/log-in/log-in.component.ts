@@ -45,6 +45,7 @@ export class LogInComponent implements OnInit {
       );
   }
 
+
   // Handle response
   responseHandler(data: any){
     this.token.handleData(data.access_token);
